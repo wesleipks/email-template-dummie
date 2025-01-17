@@ -3,6 +3,7 @@ package br.com.wes.emailtemplatedummie.service;
 import br.com.wes.emailtemplatedummie.dto.Cliente;
 import br.com.wes.emailtemplatedummie.util.TemplatesSamples;
 import jakarta.mail.internet.MimeMessage;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
@@ -17,6 +18,9 @@ import java.util.logging.Logger;
 public class EmailService {
 
     private static final Logger LOGGER = Logger.getLogger(EmailService.class.getName());
+
+    @Value("${email.to}")
+    private String to;
 
     private final JavaMailSender mailSender;
 
@@ -34,7 +38,7 @@ public class EmailService {
             message.setSubject("Assunto Qualquer!");
             message.setText(definirConteudoTemplate(), true);
             message.setSentDate(new Date());
-            message.setTo("fulano.tal@gmail.com");
+            message.setTo(to);
             message.setFrom("noreply@demomailtrap.com");
         };
     }
