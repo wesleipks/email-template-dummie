@@ -7,14 +7,14 @@ public class TemplatesSamples {
         super();
     }
 
-    public static final String TEMPLATE_LISTA = "$lista:{x | [$x$]}; separator=\"<br/> \"$";
+    public static final String ANTLR_ST4_TEMPLATE_LISTA = "$lista:{x | [$x$]}; separator=\"<br/> \"$";
 
-    public static final String FULL_TEMPLATE = "<p>Prezado(a) $nomeGestor$,</p> " +
+    public static final String ANTLR_ST4_FULL_TEMPLATE = "<p>Prezado(a) $nomeGestor$,</p> " +
             "<p>Espero que esteja bem.</p> " +
             "<p>Identificamos que alguns clientes sob sua gest&atilde;o possuem opera&ccedil;&otilde;es de cr&eacute;dito que est&atilde;o pr&oacute;ximas do vencimento em outras institui&ccedil;&otilde;es financeiras. Esse &eacute; um momento oportuno para abord&aacute;-los, com o objetivo de oferecer condi&ccedil;&otilde;es competitivas e atra&iacute;-los para realizar suas opera&ccedil;&otilde;es conosco.</p> " +
             "<p>Segue abaixo a lista dos clientes e as respectivas informa&ccedil;&otilde;es sobre as opera&ccedil;&otilde;es:</p> " +
             "<p></p> " +
-            "$cliente:{c |  " +
+            "$clientes:{c |  " +
             "<p>$i$. Cliente: $c.nomeCliente$</p> " +
             "<p>Opera&ccedil;&atilde;o: $c.tipoOperacao$</p> " +
             "<p>Subtipo Opera&ccedil;&atilde;o: $c.subtipoOperacao$</p> " +

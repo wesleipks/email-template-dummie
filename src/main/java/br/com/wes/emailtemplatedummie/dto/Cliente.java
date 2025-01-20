@@ -1,13 +1,26 @@
 package br.com.wes.emailtemplatedummie.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Cliente {
 
+    @JsonProperty("nomeCliente")
     private String nomeCliente;
-    private String cpf;
+    @JsonProperty("tipoOperacao")
+    private String tipoOperacao;
+    @JsonProperty("subtipoOperacao")
+    private String subtipoOperacao;
+    @JsonProperty("valorContratacao")
+    private String valorContratacao;
+    @JsonProperty("saldoDevedor")
+    private String saldoDevedor;
+    @JsonProperty("nomeInstituicao")
+    private String nomeInstituicao;
+    @JsonProperty("dataVencimento")
+    private String dataVencimento;
 
-    public Cliente(String nome, String cpf) {
-        this.nomeCliente = nome;
-        this.cpf = cpf;
+    public Cliente() {
+        super();
     }
 
     public String getNomeCliente() {
@@ -18,19 +31,51 @@ public class Cliente {
         this.nomeCliente = nomeCliente;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getTipoOperacao() {
+        return tipoOperacao;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setTipoOperacao(String tipoOperacao) {
+        this.tipoOperacao = tipoOperacao;
     }
 
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "nome='" + nomeCliente + '\'' +
-                ", cpf='" + cpf + '\'' +
-                '}';
+    public String getSubtipoOperacao() {
+        return subtipoOperacao;
+    }
+
+    public void setSubtipoOperacao(String subtipoOperacao) {
+        this.subtipoOperacao = subtipoOperacao;
+    }
+
+    public String getValorContratacao() {
+        return valorContratacao;
+    }
+
+    public void setValorContratacao(String valorContratacao) {
+        this.valorContratacao = valorContratacao;
+    }
+
+    public String getSaldoDevedor() {
+        return saldoDevedor;
+    }
+
+    public void setSaldoDevedor(String saldoDevedor) {
+        this.saldoDevedor = saldoDevedor;
+    }
+
+    public String getNomeInstituicao() {
+        return nomeInstituicao;
+    }
+
+    public void setNomeInstituicao(String nomeInstituicao) {
+        this.nomeInstituicao = nomeInstituicao;
+    }
+
+    public String getDataVencimento() {
+        return dataVencimento;
+    }
+
+    public void setDataVencimento(String dataVencimento) {
+        this.dataVencimento = dataVencimento;
     }
 }
